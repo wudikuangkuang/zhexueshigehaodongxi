@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<style type="text/css">
+		input[type='button']{
+			position: absolute;
+   		left: 50%;				
+		}
+	
+	</style>
+	</head>
+	<body>
+		
+	<p id="cnm">MySQL是一个关系型数据库管理系统，由瑞典MySQL AB 公司开发，目前属于 Oracle 旗下产品。MySQL 是最流行的关系型数据库管理系统之一，在 WEB 应用方面，MySQL是最好的 RDBMS (Relational Database Management System，关系数据库管理系统) 应用软件。</p>	
+		 
+		 
+		 
+		<input type="button" name="red" id="red" value="红色" onclick="color('red')"/> 
+		<a id="big" href="javascript:" >变大</a>
+		<a id="x"  href="javascript:">变小</a>
+		
+		
+		
+	</body>
+	
+	
+	<script type="text/javascript">
+		function color(str){
+			cnm.style.color= str;
+			
+		}
+		var big=document.getElementById('big');
+		var i=15;
+	big.onclick=function(){
+			i+=2;
+			cnm.style.fontSize=i+'px';
+	}
+	var x=document.getElementById('x');
+	x.onclick=function(){
+		i-=2;
+		cnm.style.fontSize=i+'px';
+		
+		
+		
+		
+	}
+	
+	</script>
+</html>
