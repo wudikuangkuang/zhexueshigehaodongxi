@@ -1,21 +1,132 @@
+
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8">
-		<title>啊实打实大地方</title>
-	</head >
-	
-	<frameset rows="100,*">
-		
-	
-	<frame name="top" src="a.html" />
-  <frameset  cols="100,*">
-  	<frame name="left" src="b.html"/>
-  	<frame name="right" />
-  	
-  </frameset>		
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#color{
+		     width: 100%;
+			    border-collapse: collapse;
+			}
+			td{
+				border: 1px solid;
+               
+                height: 50px;
+              
+			}
+		</style>
+	</head>
+	<body >
+		<table id="color">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<script type="text/javascript">
 			
-	</frameset>
-	 
+				var oTd =document.getElementsByTagName("td");
+				for (var i=0;i<oTd.length;i++) {
+					oTd[i].style.backgroundColor="hsl("+i%9*20+",50%,50%)";  
+					oTd[i].innerHTML=i;
+				}
+			</script>
 
+	</body>
 </html>
