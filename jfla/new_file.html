@@ -5,128 +5,92 @@
 		<meta charset="utf-8" />
 		<title></title>
 		<style type="text/css">
-			#color{
-		     width: 100%;
-			    border-collapse: collapse;
-			}
-			td{
-				border: 1px solid;
-               
-                height: 50px;
-              
-			}
-		</style>
-	</head>
-	<body >
-		<table id="color">
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
-		<script type="text/javascript">
-			
-				var oTd =document.getElementsByTagName("td");
-				for (var i=0;i<oTd.length;i++) {
-					oTd[i].style.backgroundColor="hsl("+i%9*20+",50%,50%)";  
-					oTd[i].innerHTML=i;
+			#jz{
+				height: 400px;
+				width: 400px;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				margin: auto;	
+				border: 1px solid black;			
+				
 				}
-			</script>
-
+				#title{
+					text-align: center;
+				}
+				#gusb{
+					
+				 width: 230px;
+				 margin: auto;
+				}
+				#a{
+					border: none;
+					outline: none;
+					height: 28px;
+					border-radius: 5px 0 0 5px;
+					border: 1px solid  black;
+					
+				}
+				
+				#b{
+					border: none;
+					outline: none;
+					height: 30px;
+					border-radius: 0 5px 5px 0;
+					border: 1px solid black;
+					position: relative;
+					top: 1px;
+					left: -5px;
+				
+				}
+		</style>
+		
+	</head>
+		
+		
+	<body >
+		<div id="jz">
+			<h1 id="title">猜字游戏</h1>
+			<div id="gusb">
+				<input 	type="text"  id="a"  placeholder="0-10整数，6次机会" />
+				 <input  type="button" id="b" onclick="guess()" value="按下" />
+				 
+							</div>
+						<div id="p">
+					      <p>剩余次数: <span id="mm">   6 </span></p>	
+					      <p> 历史记录:</p>
+					      <p id="bb"> </p>
+						</div>
+			
+		</div>
+		<script type="text/javascript">
+	 var targetNum =parseInt(Math.random()*11);
+	 	var oNumInput = document.getElementById("a");
+	 	var guessTime=6;
+			var oBtnGuess = document.getElementById("b");
+			var yy=document.getElementById('bb');
+				var cnm=document.getElementById('mm');
+			document.write(targetNum);
+			var guesstime =6;
+			function guess(){
+				if(guesstime >0 && oNumInput.value <=10 && oNumInput.value>0){
+				if(oNumInput.value>targetNum){
+					yy.innerHTML=oNumInput.value+"太大了";
+							oNumInput.value = "";
+						oNumInput.focus();
+						guessTime -= 1;
+						cnm.innerHTML = guessTime;
+					
+				}
+					
+				}
+				
+			}
+			 
+		
+	</script>
+	
 	</body>
 </html>
