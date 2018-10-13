@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.a{
+				width: 450px;
+				border: solid 2px black;
+				
+			}
+			.a img{
+				width: 100%;
+			}
+			.b{
+				width: 150px;
+				height: 150px;
+				border:solid 1px black;
+				background: url(img/962bd40735fae6cd23591fe905b30f2443a70f4c.jpg) no-repeat;
+				position: absolute;
+				left: 100px;
+				top: 100px;
+				/*background-position: -100px,-100px;*/
+				border-radius: 50%;
+				margin: -75px 0 0 -75px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="a">
+			<img src="img/962bd40735fae6cd23591fe905b30f2443a70f4c.jpg"/>
+			<div class="b"></div></div>
+		<script type="text/javascript">
+			var ouge=document.getElementsByClassName("a")[0];
+			var ouhuang=document.getElementsByClassName("b")[0];
+			
+			ouge.addEventListener("mousemove",move);
+			function move(event){
+				
+				var event=event||window.event;
+			
+				ouhuang.style.left=event.pageX+"px";
+				ouhuang.style.top=event.pageY+"px";
+				
+				var bx=ouge.getBoundingClientRect().left-ouhuang.getBoundingClientRect().left;
+				 console.log(bx);
+			    var by=ouge.getBoundingClientRect().top-ouhuang.getBoundingClientRect().top;
+			    if(event.pageX<=450&&event.pageY<=278){
+			    	ouhuang.style.opacity=1
+			    ouhuang.style.backgroundPositionX=bx-75+"px";
+			    ouhuang.style.backgroundPositionY=by-75+"px";
+			}
+			    else {ouhuang.style.opacity=0}
+			    }
+			
+		</script>
+	</body>
+</html>
